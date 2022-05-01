@@ -1,0 +1,21 @@
+{
+    "name": "byfareska/doctrine-in-wordpress",
+    "description": "DIW: Doctrine in wordpress",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Byfareska\\WordpressDoctrineOrm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Karol Szarafinowski",
+            "email": "karol@szarafinowski.pl"
+        }
+    ],
+    "require": {
+        "php": "^8",
+        "doctrine/orm": "^2"
+    }
+}
