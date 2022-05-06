@@ -14,7 +14,9 @@ class WpdbDriver extends AbstractMySQLDriver
         global $wpdb;
 
         $reflectionClass = new ReflectionClass(wpdb::class);
-        $mysqli = $reflectionClass->getProperty('dbh')->getValue($wpdb);
+        $property = $reflectionClass->getProperty('dbh');
+        $property->setAccessible(true);
+        $mysqli = $property->getValue($wpdb);
 
         return new Connection($mysqli);
     }
